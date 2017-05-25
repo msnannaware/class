@@ -1,9 +1,8 @@
  function [x]=mar_linesearch-mimimizer(x, epsilon,k,mu,maxiter)
 %
-% This function find the minimum value of f. 
+% find the minimum value of f. 
 % i.e.     x=arg{min(f)}
-% INPUT VALUES: initial point x; stoping epsilon; maximum iterations
-% maxiter;number of possibilities for linesearch  k; forcing descent...
+% maxiter;number of possibilities for linesearch  k; descent search
 % descent direction mu > 1
 %
 
