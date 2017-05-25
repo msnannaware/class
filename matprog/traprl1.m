@@ -1,0 +1,1 @@
+function s = traprl1(x^(2.5),0,1,8); 
