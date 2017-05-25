@@ -3,7 +3,7 @@ clear all
 syms x
 % Input n: Quad pt rule
 n=14;
-% Calculating the Pn(x)
+% finding Pn(x)
 % Legendre Polynomial
 % Using recursive relationship
 % P(order of polynomial, value of x)
@@ -23,10 +23,7 @@ end
 Pn=expand(Pn);
 quadpts=solve(vpa(Pn,32));
 quadpts=sort(quadpts);
-% Finding the weights
-% Formula for weights is given at
-% http://mathworld.wolfram.com/Legendre-GaussQuadrature.html
-% Equation (13)
+
 for k=1:1:n
     P0=1;
     P1=x;
@@ -41,10 +38,10 @@ for k=1:1:n
     weights(k)=vpa(2*(1-quadpts(k)^2)/(n+1)^2 )/ 
                                    ((subs(Pn,x,quadpts(k))^2,32));
 end
-    fprintf(‘Quad point rule for n=%g \n’,n)
-disp(‘  ‘)
-disp(‘Abscissas’)
+    fprintf(â€˜Quad point rule for n=%g \nâ€™,n)
+disp(â€˜  â€˜)
+disp(â€˜Abscissasâ€™)
 disp(quadpts)
-disp(‘  ‘)
-disp(‘Weights’)
-disp(weights’)_____
+disp(â€˜  â€˜)
+disp(â€˜Weightsâ€™)
+disp(weightsâ€™)_____
